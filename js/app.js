@@ -145,7 +145,7 @@ var addMemo = function(){
   saveMemoList();
   clearMemoInput();
   
-  document.location = "#home";
+  document.location = "#clock";
 };
 
 var showGeolocationError = function(){
