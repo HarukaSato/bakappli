@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <title>❤bakappli❤</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/afui.custom.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+  </head>
+  <body>
+    <div id="afui" class="ios7">
+      <div id="header" class="header">
+      </div>
+      <div id="content">
+        <div id="home" data-title="❤bakappli❤" class="panel">
+          <ul id="memo-list" class="list">
+          </ul>
+        </div>
+      </div>
+      <div id="create" data-title="追加" class="panel">
+        <div class="formGroupHead">メモの追加</div>
+        <form>
+          <div class="input-group">
+            <input placeholder="内容" type="text" id="memo-title">
+            <input placeholder="場所" type="text" id="memo-place">
+            <textarea rows="6" placeholder="詳細" id="memo-details"></textarea>
+            <button type="button" class="button icon add" id="memo-submit">追加</button>
+            <button type="button" class="button icon pin" id="memo-location">現在地を取得</button>
+          </div>
+        </form>
+      </div>
+      <div id="navbar">
+        <a href="#clock" class="icon clock">TimeLine</a>
+         <a href="#check" class="icon check">Checkin</a>
+          <a href="#camera" class="icon camera">Camera</a>
+         <a href="#home" class="icon home">アカウント</a>
+      </div>
+    </div>
+    <script src="js/appframework.ui.min.js"></script>    
+    <script src="js/af.plugins.min.js"></script>
+    <script src="js/localforage.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
