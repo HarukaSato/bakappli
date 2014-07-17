@@ -238,10 +238,13 @@ btnStart.addEventListener("click", function() {
         
         btnPhoto.addEventListener("click", function() {
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            
+            var base64 = canvas.toDataURL();    // firfoxならtoblobで直接blobにして保存できます。
+            var blob = Base64toBlob(base64);
+            saveBlob(blob,"default.png");
         });
     }
 });
+
 
 
 initApp();
