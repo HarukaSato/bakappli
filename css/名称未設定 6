@@ -1,0 +1,32 @@
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<div id="map" style="width: 400px; height: 280px;"></div>
+<script type="text/javascript">
+  var myMap = new google.maps.Map(document.getElementById("map"), {
+    // ズームレベル
+    zoom: 14,
+    // 中心点緯度経度
+    center: new google.maps.LatLng(35.701306, 139.700044),
+    // 距離目盛りの表示
+    scaleControl: true,
+    // 地図の種類
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+  var myMarker = new google.maps.Marker({
+    // マーカーを置く緯度経度
+    position: new google.maps.LatLng(35.690921, 139.700258),
+    map: myMap
+  });
+  var myInfoWindow = new google.maps.InfoWindow({
+    // 吹き出しに出す文
+    content: "新宿駅で～す"
+  });
+  // 吹き出しを開く
+  myInfoWindow.open(myMap, myMarker);
+  // 吹き出しが閉じられたら、マーカークリックで再び開くようにしておく
+  google.maps.event.addListener(myInfoWindow, "closeclick", function() {
+    google.maps.event.addListenerOnce(myMarker, "click", function(event) {
+      myInfoWindow.open(myMap, myMarker);
+    });
+  });
+</script>
+

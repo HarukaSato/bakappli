@@ -1,0 +1,7 @@
+<form method="get" action="#" class="search">
+
+<div>
+<input type="text" name="example" class="textBox"><input type="submit" value="search" class="btn">
+</div>
+
+</form>

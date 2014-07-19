@@ -215,10 +215,15 @@ var canvas = document.getElementById("canvas"),
     btnStart = document.getElementById("start"),
     btnStop = document.getElementById("stop"),
     btnPhoto = document.getElementById("photo"),
+    btnMap = document.getElementById("view_map"),
     videoObj = {
         video: true,
         audio: false
     };
+
+  btnMap.addEventListener("click", function(){
+          mapInit();
+        });
 
 btnStart.addEventListener("click", function() {
     var localMediaStream;
@@ -235,6 +240,7 @@ btnStart.addEventListener("click", function() {
         btnStop.addEventListener("click", function() {
             localMediaStream.stop();
         });
+
         
         btnPhoto.addEventListener("click", function() {
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -243,8 +249,36 @@ btnStart.addEventListener("click", function() {
             saveBlob(blob,"default.png");
         });
     }
+
+
 });
+
+function mapInit() {
+  /*
+    var centerPosition = new google.maps.LatLng(35.656956, 139.695518);
+    var option = {
+        zoom : 18,
+        center : centerPosition,
+        mapTypeId : google.maps.MapTypeId.ROADMAP
+    };
+    //地図本体描画
+    var googlemap = new google.maps.Map(document.getElementById("mapField"), option);
+    console.log(googlemap);
+    */
+      var latlng = new google.maps.LatLng(35.539001,134.228468);
+  var opts = {
+    zoom: 13,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("map"), opts);
+}
 
 
 
 initApp();
+
+
+
+//    mapInit();
+

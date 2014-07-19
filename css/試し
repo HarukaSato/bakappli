@@ -1,0 +1,22 @@
+/* サンプル 2 
+----------------------------------------------------------- */  
+#searchform2 {  
+    position: relative;   
+}  
+#keywords2  {  
+    width: 182px;  
+    height: 16px;  
+    background: #999;  
+    border: none;  
+    padding: 4px;  
+    color: #FFF;  
+}  
+#searchBtn2 {  
+    position: absolute;  
+    top: 0;  
+    _top: 1px;  
+    left: 190px;  
+}  
+*:first-child + html #searchBtn2    {  
+    top: 1px;  
+} 

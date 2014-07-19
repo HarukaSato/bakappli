@@ -1,0 +1,8 @@
+<dl>
+<dt>サンプル 2</dt>
+<dd><form name="searchform2" id="searchform2" method="get" action="#">
+<input name="keywords2" id="keywords2" value="" type="text" />
+<input type="image" src="image/btn2.gif" alt="検
+索" name="searchBtn2" id="searchBtn2" />
+</form></dd>
+</dl> 
