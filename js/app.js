@@ -136,14 +136,14 @@ var createMemoElement = function(memo){
   li.appendChild(createMemobutton(memo));
   li.setAttribute("class", "memo");
 
-/*  // スワイプされたらメモを削除する
+ // スワイプされたらメモを削除する
   li.addEventListener("swipe", function(){
     removeMemo(memo, li);
   });
   
   return li;
 };
-*/
+
 
 
 /*
