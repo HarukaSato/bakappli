@@ -1,3 +1,53 @@
 #pageTitle{
   top: 0;
 }
+
+#afui .header header{
+	background-color:#FF1493;
+}
+
+#afui.ios7 .header .button{
+    color: white;
+}
+
+#afui.ios7 .header h1{
+	color: white;
+}
+
+#afui .list li{
+	background-color: #FFF0F5
+}
+
+#afui.ios7 .panel{
+	background-color: #FFF0F5
+}
+
+#afui .formGroupHead{
+	color: #FF1493;
+}
+
+#afui .footer footer{
+	background-color: #FF1493;
+}
+#afui footer {
+	background-color: #FF1493;
+}
+
+#afui.ios7 .footer > footer > a:not(.button){
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

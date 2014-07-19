@@ -25,6 +25,11 @@ var outputElements = {
 var memos = [];
 
 /*
+  最後に撮った写真のデータ
+*/
+var latestPhoto = null;
+
+/*
  メモオブジェクトを作成する関数
  */
 var createMemo = function(title, place, details){
@@ -32,7 +37,8 @@ var createMemo = function(title, place, details){
     title: title,
     place: place,
     details: details,
-    timestamp: new Date()
+    timestamp: new Date(),
+    photo: latestPhoto
   };
 };
 
@@ -77,6 +83,19 @@ var createMemoTimestampElement = function(memo){
 };
 
 /*
+  メモオブジェクトに保存されている写真を表示するための要素を作る関数
+  */
+var createMemoPhoto = function(memo){
+  var img = document.createElement("img");
+  var src = "img/no-image.png";
+  if(memo.photo != null){
+    src = memo.photo;
+  }
+  img.setAttribute("src", src);
+  return img;
+};
+
+/*
  メモリストを保存する関数
  */
 var saveMemoList = function(){
@@ -101,11 +120,13 @@ var removeMemo = function(memo, element){
  メモオブジェクトを HTML にする関数
  */
 var createMemoElement = function(memo){
+  console.log(memo);
   var li = document.createElement("li");
   li.appendChild(createMemoTitleElement(memo));
   li.appendChild(createMemoDetailsElement(memo));
   li.appendChild(createMemoPlaceElement(memo));
   li.appendChild(createMemoTimestampElement(memo));
+  li.appendChild(createMemoPhoto(memo));
   li.setAttribute("class", "memo");
 
   // スワイプされたらメモを削除する
@@ -131,6 +152,7 @@ var clearMemoInput = function(){
   memoInputElements.title.value = "";
   memoInputElements.place.value = "";
   memoInputElements.details.value = "";
+  latestPhoto = null;
 };
 
 /*
@@ -244,9 +266,7 @@ btnStart.addEventListener("click", function() {
         
         btnPhoto.addEventListener("click", function() {
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
-            var base64 = canvas.toDataURL();    // firfoxならtoblobで直接blobにして保存できます。
-            var blob = Base64toBlob(base64);
-            saveBlob(blob,"default.png");
+            latestPhoto = canvas.toDataURL();    // firfoxならtoblobで直接blobにして保存できます。
         });
     }
 
