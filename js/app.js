@@ -117,8 +117,8 @@ var removeMemo = function(memo, element){
   }
   var index = memos.indexOf(memo);
   if(index >= 0){
-    memos.splice(index, 1);
     saveMemoList();
+    memos.splice(index, 1);
   }
 };
 
