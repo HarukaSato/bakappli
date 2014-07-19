@@ -251,6 +251,10 @@ var canvas = document.getElementById("canvas"),
         audio: false
     };
 
+var lat=35.539001;
+var lng=134.228468;
+
+
   btnMap.addEventListener("click", function(){
           mapInit();
         });
@@ -293,8 +297,11 @@ function mapInit() {
     var googlemap = new google.maps.Map(document.getElementById("mapField"), option);
     console.log(googlemap);
     */
-      var latlng = new google.maps.LatLng(35.539001,134.228468);
-  var opts = {
+    lat=35.38812218;
+    lng=139.42680007;
+
+    var latlng = new google.maps.LatLng(lat,lng);
+    var opts = {
     zoom: 13,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
