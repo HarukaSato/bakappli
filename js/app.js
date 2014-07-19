@@ -95,6 +95,12 @@ var createMemoPhoto = function(memo){
   return img;
 };
 
+var createMemobutton = function(memo){
+  var btn = document.createElement("button");
+  btn.innerHTML="location";
+  //btn.setAttribute("value","aaa");
+ return btn;
+}
 /*
  メモリストを保存する関数
  */
@@ -127,6 +133,7 @@ var createMemoElement = function(memo){
   li.appendChild(createMemoPlaceElement(memo));
   li.appendChild(createMemoTimestampElement(memo));
   li.appendChild(createMemoPhoto(memo));
+  li.appendChild(createMemobutton(memo));
   li.setAttribute("class", "memo");
 
 /*  // スワイプされたらメモを削除する
