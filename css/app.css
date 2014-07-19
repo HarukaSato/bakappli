@@ -15,11 +15,11 @@
 }
 
 #afui .list li{
-	background-color: #FFF0F5
+	background-color: #FFF0F5;
 }
 
 #afui.ios7 .panel{
-	background-color: #FFF0F5
+	background-color: #FFF0F5;
 }
 
 #afui .formGroupHead{
@@ -37,12 +37,23 @@
     color: white;
 }
 
+.event{
+    background-color: white;
+    padding: 2em;
+}
+
+h3{
+	color: #FF1493
+}
 
 
+#afui p {
+	color: #DB7093
+}
 
-
-
-
+* {
+	color: #C71585
+}
 
 
 

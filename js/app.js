@@ -129,13 +129,14 @@ var createMemoElement = function(memo){
   li.appendChild(createMemoPhoto(memo));
   li.setAttribute("class", "memo");
 
-  // スワイプされたらメモを削除する
+/*  // スワイプされたらメモを削除する
   li.addEventListener("swipe", function(){
     removeMemo(memo, li);
   });
   
   return li;
 };
+*/
 
 
 /*
